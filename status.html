@@ -10,17 +10,67 @@
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         background-color: #f8f9fa;
         color: #343a40;
-        padding: 20px;
+        padding: 0;
         margin: 0;
+    }
+
+    .topbar {
+        background-color: #007bff;
+        color: #fff;
+        padding: 10px 20px;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .topbar h1 {
+        margin: 0;
+        font-size: 24px;
     }
 
     .htframe {
         width: 100%;
         border: none;
     }
+
+    .navbar {
+        background-color: #f8f9fa;
+        padding: 10px 20px;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .navbar ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .navbar li {
+        display: inline;
+        margin-right: 10px;
+    }
+
+    .navbar a {
+        text-decoration: none;
+        color: #007bff;
+        font-weight: bold;
+    }
+
+    .navbar a:hover {
+        text-decoration: underline;
+    }
 </style>
 </head>
 <body>
+
+<div class="topbar">
+    <h1>Status</h1>
+</div>
+
+<div class="navbar">
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="status.html">Status</a></li>
+    </ul>
+</div>
 
 <iframe class="htframe" src="https://wl.hetrixtools.com/r/9c3cc17b2447be7467a773c68cf4ffbc/" scrolling="no" sandbox="allow-scripts allow-same-origin allow-popups" onload="iFrameResize([{log:false}],'.htframe')"></iframe>
 
