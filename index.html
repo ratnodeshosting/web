@@ -12,6 +12,7 @@
 <div class="topbar">
     <div class="tab"><a href="/">Home</a></div>
     <div class="tab"><a href="/status">Status</a></div>
+    <div class="tab"><a href="#" onclick="openForm()">Contact</a></div>
 </div>
 
 <div class="ip-container">
@@ -33,40 +34,55 @@
   </div>
 </div>
 
-<form name="contact" method="POST" data-netlify="true">
-  <p>
-    <label>Your Name: <input type="text" name="name" /></label>
-  </p>
-  <p>
-    <label>Your Email: <input type="email" name="email" /></label>
-  </p>
-  <p>
-    <label>Your Role: <select name="role[]" multiple>
-      <option value="leader">Leader</option>
-      <option value="follower">Follower</option>
-    </select></label>
-  </p>
-  <p>
-    <label>Message: <textarea name="message"></textarea></label>
-  </p>
-  <p>
-    <button type="submit">Send</button>
-  </p>
-</form>
+<div id="myModal" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close" onclick="closeForm()">&times;</span>
+    <form name="contact" method="POST" data-netlify="true">
+      <p>
+        <label>Your Name: <input type="text" name="name" /></label>
+      </p>
+      <p>
+        <label>Your Email: <input type="email" name="email" /></label>
+      </p>
+      <p>
+        <label>Your Role: <select name="role[]" multiple>
+          <option value="leader">Leader</option>
+          <option value="follower">Follower</option>
+        </select></label>
+      </p>
+      <p>
+        <label>Message: <textarea name="message"></textarea></label>
+      </p>
+      <p>
+        <button type="submit">Send</button>
+      </p>
+    </form>
+  </div>
+</div>
 
 <script>
-  function copyToClipboard(text) {
-    const el = document.createElement('textarea');
-    el.value = text;
-    document.body.appendChild(el);
-    el.select();
-    document.execCommand('copy');
-    document.body.removeChild(el);
-    // alert('Copied to clipboard: ' + text);
-  }
-  function stopPropagation(event) {
-    event.stopPropagation();
-  }
+function openForm() {
+  document.getElementById("myModal").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myModal").style.display = "none";
+}
+
+function copyToClipboard(text) {
+  const el = document.createElement('textarea');
+  el.value = text;
+  document.body.appendChild(el);
+  el.select();
+  document.execCommand('copy');
+  document.body.removeChild(el);
+  // alert('Copied to clipboard: ' + text);
+}
+
+function stopPropagation(event) {
+  event.stopPropagation();
+}
 </script>
 </body>
 </html>
