@@ -6,49 +6,35 @@ body {
     margin: 0;
 }
 
+.ip-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .ip-address {
-    margin-bottom: 30px; /* Adjusted spacing */
+    margin-bottom: 30px;
     cursor: pointer;
     background-color: #fff;
     border-radius: 8px;
     padding: 15px;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
+    max-width: 400px; /* Set maximum width for IP addresses */
 }
 
 .ip-address:hover {
-    transform: scale(1.03); /* Slightly reduced hover effect */
+    transform: scale(1.03);
 }
 
 .public-ip, .private-ip {
     cursor: pointer;
     color: #007bff;
     display: inline-block;
-    width: 120px; /* Adjusted width */
-    text-align: center; /* Centered text */
+    width: 120px;
+    text-align: center;
 }
 
 .public-ip:hover, .private-ip:hover {
     text-decoration: underline;
-}
-
-.logo {
-    width: 50px;
-    height: 50px;
-    background-image: url('logo.png'); /* Add your logo image path here */
-    background-size: cover;
-    background-position: center;
-    margin-bottom: 20px;
-}
-
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 30px;
-}
-
-.header h1 {
-    margin: 0;
-    font-size: 24px;
 }
