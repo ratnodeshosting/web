@@ -29,15 +29,12 @@ body {
 
 .public-ip, .private-ip {
     cursor: pointer;
-    color: #007bff;
     display: inline-block;
     width: 120px;
     text-align: center;
     padding: 5px 0;
-}
-
-.public-ip:hover, .private-ip:hover {
-    text-decoration: underline;
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit text color */
 }
 
 .header {
