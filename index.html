@@ -3,48 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>RatNodes Hosting IP Addresses</title>
-<style>
-  body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f0f0f0;
-    color: #333;
-    padding: 20px;
-    margin: 0;
-  }
-  .ip-address {
-    margin-bottom: 20px;
-    cursor: pointer;
-    background-color: #fff;
-    border-radius: 8px;
-    padding: 10px;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-  }
-  .ip-address:hover {
-    transform: translateY(-2px);
-  }
-  .public-ip, .private-ip {
-    cursor: pointer;
-    color: #007bff;
-  }
-  .public-ip:hover, .private-ip:hover {
-    text-decoration: underline;
-  }
-</style>
-<script>
-  function copyToClipboard(text) {
-    const el = document.createElement('textarea');
-    el.value = text;
-    document.body.appendChild(el);
-    el.select();
-    document.execCommand('copy');
-    document.body.removeChild(el);
-    // alert('Copied to clipboard: ' + text);
-  }
-  function stopPropagation(event) {
-    event.stopPropagation();
-  }
-</script>
+<title>IP Addresses</title>
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
@@ -65,5 +25,19 @@
   Private IP: <span class="private-ip" onclick="copyToClipboard('10.1.2.252'); stopPropagation(event)">10.1.2.252</span>
 </div>
 
+<script>
+  function copyToClipboard(text) {
+    const el = document.createElement('textarea');
+    el.value = text;
+    document.body.appendChild(el);
+    el.select();
+    document.execCommand('copy');
+    document.body.removeChild(el);
+    // alert('Copied to clipboard: ' + text);
+  }
+  function stopPropagation(event) {
+    event.stopPropagation();
+  }
+</script>
 </body>
 </html>
